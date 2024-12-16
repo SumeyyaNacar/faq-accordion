@@ -1,0 +1,100 @@
+@font-face {
+    font-family: workSans-italic;
+    src: url(assets/fonts/WorkSans-Italic-VariableFont_wght.ttf);
+    font-family: workSans-variable;
+    src: url(assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+:root{
+    --white: hsl(0, 0%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
+    --grayish-purple: hsl(292, 16%, 49%);
+    --dark-purple: hsl(292, 54%, 25%);
+    --font-family-1: workSans-italic;
+    --font-family-2: workSans-variable;
+}
+
+body {
+    font-family: var(--font-family-2);
+    background-color: var(--light-pink);
+    color: var(--dark-purple);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+}
+
+.bg-top{
+    position: fixed;
+    top: 0;
+    width: 100%; 
+    z-index: -1;
+
+}
+
+.container {
+    max-width: 600px;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 2;
+    position: fixed;
+    transform: translateY(-50%);
+    top: 50%;
+   
+    
+}
+.head{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 700;
+    margin-left:20px
+}
+.first{
+    padding: 10px;
+    border-bottom: 2px solid var(--light-pink);
+}
+.first:last-child{
+    border-bottom: 0;
+}
+h4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h4:hover{
+    color:rgb(245, 6, 245);
+}
+
+h4 > img#plus-minus {
+    width: 20px; /* Doğru genişlik ayarı */
+    height: auto; /* Oran korunur */
+    cursor: pointer;
+}
+.first > p{
+    text-align: start;
+    display: none;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    position: fixed;
+    bottom: 20px;
+
+}
+.attribution a { color: hsl(228, 45%, 44%); }
